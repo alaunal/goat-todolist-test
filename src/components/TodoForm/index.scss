@@ -1,0 +1,85 @@
+.header {
+  display: block;
+  background-color: #265961;
+  padding: 2rem 2rem;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+
+  &__title {
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 0;
+
+    span {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  &__subtitle {
+    color: #ddd;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: normal;
+    margin: 0;
+  }
+}
+
+.todo-form {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+
+  &__input-control {
+    border: 0;
+    outline: 0;
+    background-color: #fff;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    font-size: 18px;
+    color: #222;
+    flex: 1;
+    height: 48px;
+
+    &::placeholder {
+      color: #bbb;
+    }
+
+    &:disabled {
+      background-color: rgb(212, 212, 212);
+    }
+  }
+
+  &__button {
+    margin-left: 0.5rem;
+    padding: 0.25rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #F8B739;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    height: 48px;
+    font-size: 18px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #ffc758;
+    }
+
+    &:disabled {
+      background-color: #fae59a;
+    }
+  }
+
+  &__error {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

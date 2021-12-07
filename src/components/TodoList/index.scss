@@ -1,0 +1,120 @@
+// -- Wrapper list task
+
+.list-items {
+  margin-top: -2rem;
+  padding: 3.5rem 1rem 1.5rem 1rem;
+
+  &__empty {
+    margin-top: 4rem;
+    display: block;
+    text-align: center;
+
+    img {
+      display: inline-block;
+      max-width: 360px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 1rem;
+      color: #666;
+      font-weight: 400;
+    }
+  }
+}
+
+// -- list Task
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  border: 1px solid #ddd;
+  border-left: 6px solid #76A665;
+  background-color: #fff;
+  align-items: center;
+
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__task {
+    flex: 1;
+    padding-right: 1rem;
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #222;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    p {
+      margin: 0;
+      line-height: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+
+  &__action {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    background-color: #FF7E67;
+    color: #fff;
+    border-radius: 50px;
+    transition: 0.3s;
+    font-size: 24px;
+    border: 0;
+    outline: 0;
+
+    &:hover {
+      background-color: #e95035;
+    }
+
+    &:disabled {
+      background-color: #ffa899;
+    }
+  }
+}
+
+// -- Placeholder list loader
+
+.placehoder {
+  margin: 0 auto;
+  min-height: 74px;
+  background-color: #eee;
+  display: block;
+}
+
+.animated-background {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: darkgray;
+  background: linear-gradient(to right, #eeeeee 10%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  height: 74px;
+  position: relative;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
